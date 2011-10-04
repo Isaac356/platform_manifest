@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="korg"
-           fetch="git://android.git.kernel.org/"
+           fetch="git://github.com/"
            review="review.source.android.com" />
   <default revision="froyo"
            remote="korg" />
 
-  <project path="build" name="platform/build">
+  <project path="build" name="android/platform_build">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="bionic" name="platform/bionic" />
+  <project path="bionic" name="android/platform_bionic" />
 
-  <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
-  <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
-  <project path="bootable/recovery" name="platform/bootable/recovery" />
+  <project path="bootable/bootloader/legacy" name="android/platform_bootloader_legacy" />
+  <!-- <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" /> -->
+  <project path="bootable/recovery" name="android/platform_recovery" />
 
-  <project path="cts" name="platform/cts" />
-  <project path="dalvik" name="platform/dalvik" />
-  <project path="development" name="platform/development" />
+  <!-- <project path="cts" name="platform/cts" /> -->
+  <project path="dalvik" name="android/platform_dalvik" />
+  <project path="development" name="android/platform_development" />
 
+  <!-- no devices on github/android
   <project path="device/common" name="device/common" />
   <project path="device/htc/common" name="device/htc/common" />
   <project path="device/htc/dream" name="device/htc/dream" />
@@ -28,70 +29,84 @@
   <project path="device/htc/passion-common" name="device/htc/passion-common" />
   <project path="device/htc/sapphire" name="device/htc/sapphire" />
   <project path="device/sample" name="device/sample" />
+  -->
 
-  <project path="external/apache-http" name="platform/external/apache-http" />
-  <project path="external/astl" name="platform/external/astl" />
-  <project path="external/bison" name="platform/external/bison" />
-  <project path="external/blktrace" name="platform/external/blktrace" />
-  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
+  <project path="external/apache-http" name="android/platform_external_apache-http" />
+  <!-- <project path="external/astl" name="platform/external/astl" /> -->
+  <!-- <project path="external/bison" name="platform/external/bison" /> -->
+  <!-- <project path="external/blktrace" name="platform/external/blktrace" /> -->
+  <project path="external/bluetooth/bluez" name="android/platform_external_bluez" />
+  <!--
   <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
   <project path="external/bluetooth/hcidump" name="platform/external/bluetooth/hcidump" />
   <project path="external/bsdiff" name="platform/external/bsdiff" />
   <project path="external/bzip2" name="platform/external/bzip2" />
-  <project path="external/clearsilver" name="platform/external/clearsilver" />
-  <project path="external/dbus" name="platform/external/dbus" />
-  <project path="external/dhcpcd" name="platform/external/dhcpcd" />
-  <project path="external/dnsmasq" name="platform/external/dnsmasq" />
-  <project path="external/dropbear" name="platform/external/dropbear" />
+  -->
+  <project path="external/clearsilver" name="android/platform_external_clearsilver" />
+  <project path="external/dbus" name="android/platform_external_dbus" />
+  <project path="external/dhcpcd" name="android/platform_external_dhcpcd" />
+  <!-- <project path="external/dnsmasq" name="platform/external/dnsmasq" /> -->
+  <project path="external/dropbear" name="android/platform_external_dropbear" />
+  <!--
   <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
   <project path="external/easymock" name="platform/external/easymock" />
-  <project path="external/elfcopy" name="platform/external/elfcopy" />
-  <project path="external/elfutils" name="platform/external/elfutils" />
-  <project path="external/embunit" name="platform/external/embunit" />
-  <project path="external/emma" name="platform/external/emma" />
-  <project path="external/esd" name="platform/external/esd" />
-  <project path="external/expat" name="platform/external/expat" />
-  <project path="external/fdlibm" name="platform/external/fdlibm" />
-  <project path="external/freetype" name="platform/external/freetype" />
+  -->
+  <project path="external/elfcopy" name="android/platform_external_elfcopy" />
+  <project path="external/elfutils" name="android/platform_external_elfutils" />
+  <!-- <project path="external/embunit" name="platform/external/embunit" /> -->
+  <project path="external/emma" name="android/platform_external_emma" />
+  <project path="external/esd" name="android/platform_external_esd" />
+  <project path="external/expat" name="android/platform_external_expat" />
+  <project path="external/fdlibm" name="android/platform_external_fdlibm" />
+  <project path="external/freetype" name="android/platform_external_freetype" />
+  <!--
   <project path="external/fsck_msdos" name="platform/external/fsck_msdos" />
   <project path="external/genext2fs" name="platform/external/genext2fs" />
-  <project path="external/giflib" name="platform/external/giflib" />
+  -->
+  <project path="external/giflib" name="android/platform_external_giflib" />
+  <!--
   <project path="external/grub" name="platform/external/grub" />
   <project path="external/gtest" name="platform/external/gtest" />
   <project path="external/guava" name="platform/external/guava" />
-  <project path="external/icu4c" name="platform/external/icu4c" />
+  -->
+  <project path="external/icu4c" name="android/platform_external_icu4c" />
+  <!--
   <project path="external/iproute2" name="platform/external/iproute2" />
   <project path="external/ipsec-tools" name="platform/external/ipsec-tools" />
-  <project path="external/iptables" name="platform/external/iptables" />
-  <project path="external/jdiff" name="platform/external/jdiff" />
-  <project path="external/jhead" name="platform/external/jhead" />
-  <project path="external/jpeg" name="platform/external/jpeg" />
+  -->
+  <project path="external/iptables" name="android/platform_external_iptables" />
+  <project path="external/jdiff" name="android/platform_external_jdiff" />
+  <project path="external/jhead" name="android/platform_external_jhead" />
+  <project path="external/jpeg" name="android/platform_external_jpeg" />
+  <!--
   <project path="external/jsr305" name="platform/external/jsr305" />
   <project path="external/junit" name="platform/external/junit" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
-  <project path="external/libffi" name="platform/external/libffi" />
-  <project path="external/libpcap" name="platform/external/libpcap" />
-  <project path="external/libpng" name="platform/external/libpng" />
-  <project path="external/libxml2" name="platform/external/libxml2" />
-  <project path="external/mtpd" name="platform/external/mtpd" />
-  <project path="external/netcat" name="platform/external/netcat" />
-  <project path="external/netperf" name="platform/external/netperf" />
-  <project path="external/neven" name="platform/external/neven" />
-  <project path="external/opencore" name="platform/external/opencore" />
-  <project path="external/openssl" name="platform/external/openssl" />
-  <project path="external/oprofile" name="platform/external/oprofile" />
-  <project path="external/ping" name="platform/external/ping" />
-  <project path="external/ppp" name="platform/external/ppp" />
-  <project path="external/proguard" name="platform/external/proguard" />
-  <project path="external/qemu" name="platform/external/qemu"  revision="tools_r6"/>
-  <project path="external/quake" name="platform/external/quake" />
-  <project path="external/safe-iop" name="platform/external/safe-iop" />
-  <project path="external/skia" name="platform/external/skia" />
-  <project path="external/sonivox" name="platform/external/sonivox" />
-  <project path="external/speex" name="platform/external/speex" />
-  <project path="external/sqlite" name="platform/external/sqlite" />
-  <project path="external/srec" name="platform/external/srec" />
-  <project path="external/stlport" name="platform/external/stlport" />
+  -->
+  <project path="external/libffi" name="android/platform_external_libffi" />
+  <project path="external/libpcap" name="android/platform_external_libpcap" />
+  <project path="external/libpng" name="android/platform_external_libpng" />
+  <project path="external/libxml2" name="android/platform_external_libxml2" />
+  <!-- <project path="external/mtpd" name="platform/external/mtpd" /> -->
+  <project path="external/netcat" name="android/platform_external_netcat" />
+  <project path="external/netperf" name="android/platform_external_netperf" />
+  <project path="external/neven" name="android/platform_external_neven" />
+  <project path="external/opencore" name="android/platform_external_opencore" />
+  <project path="external/openssl" name="android/platform_external_openssl" />
+  <project path="external/oprofile" name="android/platform_external_oprofile" />
+  <project path="external/ping" name="android/platform_external_ping" />
+  <project path="external/ppp" name="android/platform_external_ppp" />
+  <!-- <project path="external/proguard" name="platform/external/proguard" /> -->
+  <project path="external/qemu" name="android/platform_external_qemu"  revision="tools_r6"/>
+  <!-- <project path="external/quake" name="platform/external/quake" /> -->
+  <project path="external/safe-iop" name="android/platform_external_safe-iop" />
+  <project path="external/skia" name="android/platform_external_skia" />
+  <project path="external/sonivox" name="android/platform_external_sonivox" />
+  <!-- <project path="external/speex" name="platform/external/speex" /> -->
+  <project path="external/sqlite" name="android/platform_external_sqlite" />
+  <project path="external/srec" name="android/platform_external_srec" />
+  <!-- <project path="external/stlport" name="platform/external/stlport" /> -->
+  <!-- etc. (need to continue this later) -->
   <project path="external/strace" name="platform/external/strace" />
   <project path="external/svox" name="platform/external/svox" />
   <project path="external/tagsoup" name="platform/external/tagsoup" />
